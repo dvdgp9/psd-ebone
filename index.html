@@ -1,459 +1,500 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="es">
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>CAMPAMENTOS DE VERANO E INTENSIVOS 2026 | Facultad de Ciencias del Deporte</title>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<title>Campamentos de Verano e Intensivos 2026 | Facultad de Ciencias del Deporte</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-container": "#bcf3ff",
-                    "on-surface-variant": "#3f484d",
-                    "on-secondary-fixed-variant": "#1b4c61",
-                    "primary": "#00586f",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-background": "#171c1e",
-                    "inverse-primary": "#80d1f2",
-                    "secondary-fixed-dim": "#9fcde5",
-                    "on-secondary-fixed": "#001e2b",
-                    "surface-variant": "#dee3e5",
-                    "surface-container-low": "#eff4f6",
-                    "secondary": "#366479",
-                    "on-secondary-container": "#39667c",
-                    "surface-container": "#eaeff1",
-                    "tertiary-fixed": "#a1efff",
-                    "secondary-fixed": "#c0e8ff",
-                    "inverse-on-surface": "#ecf2f4",
-                    "surface": "#f5fafc",
-                    "on-tertiary-fixed": "#001f25",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed": "#001f29",
-                    "surface-container-highest": "#dee3e5",
-                    "on-error": "#ffffff",
-                    "surface-tint": "#006781",
-                    "tertiary": "#005a66",
-                    "outline-variant": "#bec8cd",
-                    "on-surface": "#171c1e",
-                    "on-error-container": "#93000a",
-                    "primary-fixed": "#baeaff",
-                    "tertiary-container": "#007483",
-                    "error-container": "#ffdad6",
-                    "surface-container-high": "#e4e9eb",
-                    "on-primary-container": "#cbefff",
-                    "outline": "#6f787d",
-                    "error": "#ba1a1a",
-                    "surface-bright": "#f5fafc",
-                    "background": "#f5fafc",
-                    "inverse-surface": "#2c3133",
-                    "secondary-container": "#b5e3fd",
-                    "on-tertiary-fixed-variant": "#004e59",
-                    "on-primary": "#ffffff",
-                    "tertiary-fixed-dim": "#44d8f1",
-                    "surface-dim": "#d6dbdd",
-                    "on-primary-fixed-variant": "#004d62",
-                    "primary-container": "#00728f",
-                    "primary-fixed-dim": "#80d1f2"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Lexend"],
-                    "body": ["Manrope"],
-                    "label": ["Lexend"]
-            }
-          },
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#00586f",
+          "primary-strong": "#00495d",
+          "primary-soft": "#e4f4f8",
+          secondary: "#366479",
+          tertiary: "#005a66",
+          surface: "#f5fafc",
+          "surface-soft": "#eef4f6",
+          ink: "#171c1e",
+          muted: "#526066",
+          line: "#cfd8dc",
+          success: "#d9efe6",
+          sand: "#f5eee2"
         },
-      }
-    </script>
-<style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Manrope', sans-serif; }
-        h1, h2, h3, .font-headline { font-family: 'Lexend', sans-serif; }
-        section[id] { scroll-margin-top: 6rem; }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        fontFamily: {
+          headline: ["Lexend", "sans-serif"],
+          body: ["Manrope", "sans-serif"]
+        },
+        boxShadow: {
+          soft: "0 24px 60px -32px rgba(0, 88, 111, 0.28)",
+          panel: "0 18px 45px -30px rgba(23, 28, 30, 0.18)"
         }
-    </style>
+      }
+    }
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: "Manrope", sans-serif; }
+  h1, h2, h3, h4, .font-headline { font-family: "Lexend", sans-serif; }
+  section[id] { scroll-margin-top: 6rem; }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .delay-1 { animation-delay: 0.08s; }
+  .delay-2 { animation-delay: 0.16s; }
+  .delay-3 { animation-delay: 0.24s; }
+  .delay-4 { animation-delay: 0.32s; }
+  @keyframes rise {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
-<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
-<a class="flex items-center gap-3" href="#">
-<img alt="Proyecto Social Deportivo" class="h-14 w-auto object-contain shrink-0" src="./assets/Logo_principal.png">
-<span class="hidden sm:block text-lg font-black text-cyan-900 dark:text-cyan-50 italic font-['Lexend'] tracking-tight">PROYECTO SOCIAL DEPORTIVO</span>
+<body class="bg-surface text-ink selection:bg-primary selection:text-white">
+<nav class="fixed inset-x-0 top-0 z-40 border-b border-white/20 bg-white/78 backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
+<a class="flex items-center gap-3" href="#top">
+<img alt="Proyecto Social Deportivo" class="h-14 w-auto object-contain" src="./assets/Logo_principal.png">
+<span class="hidden text-sm font-extrabold uppercase tracking-[0.18em] text-primary md:block">Proyecto Social Deportivo</span>
 </a>
-<div class="hidden md:flex items-center gap-8 font-['Lexend'] tracking-tight">
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-200 transition-colors" href="#calendar">Turnos</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-200 transition-colors" href="#info">Info</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-200 transition-colors" href="#categories">Grupos</a>
+<div class="hidden items-center gap-7 text-sm font-semibold text-muted md:flex">
+<a class="transition-colors hover:text-primary" href="#servicios">Servicios</a>
+<a class="transition-colors hover:text-primary" href="#campamento">Campamento</a>
+<a class="transition-colors hover:text-primary" href="#intensivos">Intensivos</a>
+<a class="transition-colors hover:text-primary" href="#tarifas">Tarifas</a>
 </div>
-<a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold hover:opacity-80 transition-all active:scale-95 duration-200" href="#registration">Tarifas</a>
+<a class="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white transition duration-300 hover:bg-primary-strong active:scale-[0.98]" href="#inscripcion">Inscribirse</a>
 </div>
 </nav>
-<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="niños y monitores en actividades deportivas de verano" src="./assets/fotos/hero-campamento.jpg">
-<div class="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary-container/40 to-transparent"></div>
+
+<header class="relative flex min-h-[100dvh] items-center overflow-hidden pt-20" id="top">
+<div class="absolute inset-0">
+<img alt="Ninos y monitores en actividades deportivas de verano" class="h-full w-full object-cover" src="./assets/fotos/hero-campamento.jpg">
+<div class="absolute inset-0 bg-[linear-gradient(95deg,rgba(0,73,93,0.92)_0%,rgba(0,88,111,0.76)_40%,rgba(245,250,252,0.18)_100%)]"></div>
 </div>
-<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="relative mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1.2fr_0.8fr] md:px-8">
 <div class="max-w-3xl">
-<span class="inline-block px-4 py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full text-sm font-bold tracking-widest uppercase mb-6">
-                    Verano 2026
-                </span>
-<h1 class="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter italic mb-6">CAMPAMENTOS<br><span class="text-secondary-container">E INTENSIVOS</span></h1>
-<p class="text-xl md:text-2xl text-white/90 font-medium mb-10 flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-fixed">waves</span>
-                    Organiza: Facultad de Ciencias del Deporte (UGR)
-                </p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-primary-container text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all active:scale-95" href="#calendar">
-                        Ver Turnos
-                    </a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/20 transition-all active:scale-95" href="#registration">
-                        Ver Tarifas
-                    </a>
+<div class="reveal inline-flex items-center gap-2 rounded-full bg-white/12 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-white/92">
+<span class="material-symbols-outlined text-base">calendar_month</span>
+<span>Verano 2026</span>
+</div>
+<h1 class="reveal delay-1 mt-6 max-w-3xl text-4xl font-black leading-none tracking-tight text-white md:text-6xl">
+Campamentos de verano, intensivos de natacion y aquagym en un solo vistazo.
+</h1>
+<p class="reveal delay-2 mt-6 max-w-2xl text-lg leading-relaxed text-white/84 md:text-xl">
+La Facultad de Ciencias del Deporte organiza tres programas distintos. Aqui puedes ver de forma clara para quien es cada uno, sus fechas, horarios y tarifas antes de iniciar la inscripcion.
+</p>
+<div class="reveal delay-3 mt-8 flex flex-wrap gap-4">
+<a class="inline-flex items-center rounded-full bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-primary transition duration-300 hover:-translate-y-[1px] hover:shadow-soft active:scale-[0.98]" href="#servicios">Ver servicios</a>
+<a class="inline-flex items-center rounded-full border border-white/28 bg-white/8 px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition duration-300 hover:bg-white/14 active:scale-[0.98]" href="#inscripcion">Ir a la inscripcion</a>
+</div>
+<div class="reveal delay-4 mt-10 grid gap-3 text-sm text-white/86 sm:grid-cols-3">
+<div class="glass-panel rounded-2xl px-4 py-4">
+<div class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-white/70">Campamento</div>
+<div class="mt-2 text-base font-bold">4 a 15 anos</div>
+<div class="mt-1 text-white/74">23 junio - 4 septiembre</div>
+</div>
+<div class="glass-panel rounded-2xl px-4 py-4">
+<div class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-white/70">Intensivo</div>
+<div class="mt-2 text-base font-bold">3 a 15 anos</div>
+<div class="mt-1 text-white/74">8 - 26 junio, turnos de tarde</div>
+</div>
+<div class="glass-panel rounded-2xl px-4 py-4">
+<div class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-white/70">Aquagym</div>
+<div class="mt-2 text-base font-bold">Mayores de 16 anos</div>
+<div class="mt-1 text-white/74">8 - 26 junio, 19:00 - 20:00</div>
+</div>
+</div>
+</div>
+<div class="reveal delay-2 self-end md:justify-self-end">
+<div class="glass-panel max-w-md rounded-[2rem] p-6 text-ink shadow-panel">
+<div class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Antes de elegir</div>
+<h2 class="mt-3 text-2xl font-black tracking-tight">Que cambia entre un servicio y otro</h2>
+<div class="mt-6 space-y-4">
+<div class="rounded-2xl bg-white/80 p-4">
+<div class="text-sm font-extrabold uppercase tracking-[0.12em] text-primary">Campamento</div>
+<p class="mt-2 text-sm leading-relaxed text-muted">Programa de manana con actividades deportivas, grupos por edad y extras opcionales como aula matinal y comedor.</p>
+</div>
+<div class="rounded-2xl bg-primary-soft p-4">
+<div class="text-sm font-extrabold uppercase tracking-[0.12em] text-primary">Intensivo de natacion</div>
+<p class="mt-2 text-sm leading-relaxed text-muted">Cursos semanales de una hora para ninos y ninas de 3 a 15 anos, organizados por nivel de piscina.</p>
+</div>
+<div class="rounded-2xl bg-sand p-4">
+<div class="text-sm font-extrabold uppercase tracking-[0.12em] text-primary">Aquagym</div>
+<p class="mt-2 text-sm leading-relaxed text-muted">Programa semanal independiente para mayores de 16 anos en horario de 19:00 a 20:00.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </header>
+
 <main>
-<section class="py-24 bg-surface" id="calendar">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<section class="border-y border-line/70 bg-white py-16" id="servicios">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
 <div>
-<h2 class="text-4xl md:text-5xl font-black text-primary italic leading-none mb-4">TURNOS Y FECHAS</h2>
-<p class="text-on-surface-variant font-medium">Programación completa: campamentos (23 junio - 4 septiembre) e intensivos de natación y aquagym (8-26 junio), de lunes a viernes.</p>
+<p class="text-xs font-extrabold uppercase tracking-[0.22em] text-primary">Servicios 2026</p>
+<h2 class="mt-3 max-w-xl text-3xl font-black leading-tight tracking-tight text-ink md:text-5xl">Elige el programa adecuado en menos de un minuto.</h2>
 </div>
-<div class="hidden md:block h-px flex-1 mx-12 bg-outline-variant/30"></div>
+<p class="max-w-2xl text-base leading-relaxed text-muted">
+Esta pagina diferencia claramente las tres opciones activas de verano para que no tengas que cruzar fechas, edades y precios entre bloques sueltos.
+</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="text-sm font-bold text-primary-container mb-2">8-26 JUNIO 2026</div>
-<h3 class="text-2xl font-black text-on-surface mb-4 uppercase tracking-tight">Intensivo Natación</h3>
-<p class="text-xs text-on-surface-variant mb-4">Niños y niñas de 3 a 15 años, turnos de 1 hora.</p>
-<ul class="space-y-1 text-xs text-on-surface-variant mb-6">
-<li>1.º turno: del 8 al 12 de junio</li>
-<li>2.º turno: del 15 al 19 de junio</li>
-<li>3.º turno: del 22 al 26 de junio</li>
+<div class="mt-10 grid gap-6 lg:grid-cols-[1.25fr_0.95fr_0.8fr]">
+<article class="rounded-[2rem] border border-line bg-surface p-7 shadow-panel">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Servicio principal</p>
+<h3 class="mt-3 text-2xl font-black tracking-tight">Campamentos de verano</h3>
+</div>
+<span class="rounded-full bg-primary px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white">4 a 15 anos</span>
+</div>
+<p class="mt-4 max-w-[52ch] text-sm leading-relaxed text-muted">Programa de manana con actividades deportivas, grupos por edad y extras opcionales. Pensado para familias que buscan una opcion diaria durante el verano.</p>
+<dl class="mt-6 grid gap-4 sm:grid-cols-2">
+<div class="rounded-2xl bg-white p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Fechas</dt>
+<dd class="mt-2 text-sm font-bold text-ink">23 junio - 4 septiembre</dd>
+</div>
+<div class="rounded-2xl bg-white p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Horario base</dt>
+<dd class="mt-2 text-sm font-bold text-ink">9:00 - 14:00</dd>
+</div>
+<div class="rounded-2xl bg-white p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Extras</dt>
+<dd class="mt-2 text-sm font-bold text-ink">Aula matinal, comedor, dia suelto</dd>
+</div>
+<div class="rounded-2xl bg-white p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Tarifa</dt>
+<dd class="mt-2 text-sm font-bold text-ink">Desde 65 EUR por turno</dd>
+</div>
+</dl>
+<a class="mt-6 inline-flex items-center rounded-full bg-primary px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white transition duration-300 hover:bg-primary-strong active:scale-[0.98]" href="#campamento">Ver detalles</a>
+</article>
+<article class="rounded-[2rem] border border-line bg-primary-soft p-7 shadow-panel">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Servicio de tarde</p>
+<h3 class="mt-3 text-2xl font-black tracking-tight">Intensivos de natacion</h3>
+</div>
+<span class="rounded-full bg-white px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-primary">3 a 15 anos</span>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-muted">Cursos semanales de una hora, de lunes a viernes, divididos por niveles de piscina y con tres turnos semanales durante junio.</p>
+<dl class="mt-6 grid gap-4">
+<div class="rounded-2xl bg-white/80 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Fechas</dt>
+<dd class="mt-2 text-sm font-bold text-ink">8 - 26 junio</dd>
+</div>
+<div class="rounded-2xl bg-white/80 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Horarios</dt>
+<dd class="mt-2 text-sm font-bold text-ink">17:00 - 18:00 y 18:00 - 19:00</dd>
+</div>
+<div class="rounded-2xl bg-white/80 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Precio</dt>
+<dd class="mt-2 text-sm font-bold text-ink">32 EUR por 5 dias</dd>
+</div>
+</dl>
+<a class="mt-6 inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-primary transition duration-300 hover:-translate-y-[1px] active:scale-[0.98]" href="#intensivos">Ver detalles</a>
+</article>
+<article class="rounded-[2rem] border border-line bg-sand p-7 shadow-panel">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Programa independiente</p>
+<h3 class="mt-3 text-2xl font-black tracking-tight">Aquagym</h3>
+</div>
+<span class="rounded-full bg-white px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-primary">+16 anos</span>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-muted">Actividad semanal en el agua, con musica y trabajo aerobico en vertical. No forma parte del campamento.</p>
+<dl class="mt-6 grid gap-4">
+<div class="rounded-2xl bg-white/70 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Fechas</dt>
+<dd class="mt-2 text-sm font-bold text-ink">8 - 26 junio</dd>
+</div>
+<div class="rounded-2xl bg-white/70 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Horario</dt>
+<dd class="mt-2 text-sm font-bold text-ink">19:00 - 20:00</dd>
+</div>
+<div class="rounded-2xl bg-white/70 p-4">
+<dt class="text-xs font-extrabold uppercase tracking-[0.15em] text-muted">Precio</dt>
+<dd class="mt-2 text-sm font-bold text-ink">22 EUR por 5 dias</dd>
+</div>
+</dl>
+<a class="mt-6 inline-flex items-center rounded-full bg-primary px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white transition duration-300 hover:bg-primary-strong active:scale-[0.98]" href="#intensivos">Ver detalles</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="bg-surface py-20" id="campamento">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.22em] text-primary">Campamentos de verano</p>
+<h2 class="mt-3 max-w-2xl text-3xl font-black leading-tight tracking-tight md:text-5xl">La opcion de manana para ninos y ninas de 4 a 15 anos.</h2>
+<p class="mt-5 max-w-[60ch] text-base leading-relaxed text-muted">El campamento funciona por turnos semanales y mantiene una estructura muy clara: actividades de 9:00 a 14:00, con la posibilidad de ampliar entrada y salida mediante servicios opcionales.</p>
+<div class="mt-8 grid gap-4 sm:grid-cols-2">
+<div class="rounded-[1.5rem] bg-white p-5 shadow-panel">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Turnos</div>
+<ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink">
+<li>1o turno: 23 - 26 junio</li>
+<li>2o turno: 29 junio - 3 julio</li>
+<li>3o turno: 6 - 10 julio</li>
+<li>4o turno: 13 - 17 julio</li>
+<li>5o turno: 20 - 24 julio</li>
+<li>6o turno: 27 - 31 julio</li>
+<li>7o turno: 1 - 4 septiembre</li>
 </ul>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-xl">location_on</span>
-<span class="text-sm font-semibold">Piscina Facultad de Ciencias del Deporte</span>
 </div>
-</div>
-<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="text-sm font-bold text-tertiary mb-2">23 JUNIO - 4 SEPTIEMBRE 2026</div>
-<h3 class="text-2xl font-black text-on-surface mb-4 uppercase tracking-tight">Campamentos de Verano</h3>
-<ul class="space-y-1 text-xs text-on-surface-variant mb-6">
-<li>1.º: 23-26 junio</li>
-<li>2.º: 29 junio-3 julio</li>
-<li>3.º: 6-10 julio</li>
-<li>4.º: 13-17 julio</li>
-<li>5.º: 20-24 julio</li>
-<li>6.º: 27-31 julio</li>
-<li>7.º: 1-4 septiembre</li>
+<div class="rounded-[1.5rem] bg-white p-5 shadow-panel">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Horarios y extras</div>
+<ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink">
+<li>Aula matinal: 8:00 - 9:00</li>
+<li>Campamento: 9:00 - 14:00</li>
+<li>Comedor: 14:00 - 15:00</li>
+<li>Dia suelto: segun disponibilidad</li>
 </ul>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-tertiary text-xl">location_on</span>
-<span class="text-sm font-semibold">Carretera de Alfacar 21, 18011, Granada</span>
 </div>
 </div>
-<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="text-sm font-bold text-primary-container mb-2">HORARIOS Y OPCIONES</div>
-<h3 class="text-2xl font-black text-on-surface mb-4 uppercase tracking-tight">Servicios diarios</h3>
-<ul class="space-y-1 text-xs text-on-surface-variant mb-6">
-<li>Aula matinal: 8:00-9:00</li>
-<li>Campamento: 9:00-14:00</li>
-<li>Comedor: 14:00-15:00</li>
-<li>Día suelto de campamento: 9:00-14:00</li>
-</ul>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-xl">location_on</span>
-<span class="text-sm font-semibold">Facultad de Ciencias del Deporte</span>
+<div class="mt-4 rounded-[1.75rem] border border-line bg-white p-6 shadow-panel">
+<h3 class="text-lg font-black tracking-tight text-ink">Grupos y plazas por turno</h3>
+<div class="mt-5 grid gap-3 sm:grid-cols-2">
+<div class="rounded-2xl bg-surface px-4 py-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Grupo A</div>
+<div class="mt-2 text-base font-bold text-ink">4 - 6 anos</div>
+<div class="mt-1 text-sm text-muted">2022 - 2020 · 30 plazas</div>
+</div>
+<div class="rounded-2xl bg-surface px-4 py-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Grupo B</div>
+<div class="mt-2 text-base font-bold text-ink">7 - 9 anos</div>
+<div class="mt-1 text-sm text-muted">2019 - 2017 · 40 plazas</div>
+</div>
+<div class="rounded-2xl bg-surface px-4 py-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Grupo C</div>
+<div class="mt-2 text-base font-bold text-ink">10 - 12 anos</div>
+<div class="mt-1 text-sm text-muted">2016 - 2014 · 40 plazas</div>
+</div>
+<div class="rounded-2xl bg-surface px-4 py-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Grupo D</div>
+<div class="mt-2 text-base font-bold text-ink">13 - 15 anos</div>
+<div class="mt-1 text-sm text-muted">2013 - 2011 · 20 plazas</div>
 </div>
 </div>
-<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="text-sm font-bold text-tertiary mb-2">PROGRAMA AQUAGYM +16</div>
-<h3 class="text-2xl font-black text-on-surface mb-4 uppercase tracking-tight">Actividad complementaria</h3>
-<p class="text-xs text-on-surface-variant mb-4">Ejercicio aeróbico en el agua, principalmente en vertical, sin nadar y con acompañamiento musical.</p>
-<ul class="space-y-1 text-xs text-on-surface-variant mb-6">
-<li>Horario: 19:00 a 20:00</li>
-<li>Vaso de enseñanza</li>
-<li>Mínimo 10 inscritos para abrir servicio</li>
-</ul>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-tertiary text-xl">location_on</span>
-<span class="text-sm font-semibold">Del 8 al 26 de junio (lunes a viernes)</span>
+<p class="mt-4 text-sm leading-relaxed text-muted">Minimo 10 inscritos para abrir cada grupo y para habilitar servicios opcionales.</p>
+</div>
+</div>
+<div class="space-y-5">
+<div class="overflow-hidden rounded-[2rem] shadow-panel">
+<img alt="Instalaciones del campamento de verano en la facultad" class="h-[320px] w-full object-cover" src="./assets/fotos/instalaciones-campamento.jpg">
+</div>
+<div class="rounded-[2rem] bg-primary p-7 text-white shadow-soft">
+<div class="text-xs font-extrabold uppercase tracking-[0.18em] text-white/70">Que se hace en el campamento</div>
+<p class="mt-4 text-base leading-relaxed text-white/86">Sesiones para desarrollar habilidades motoras y psicomotrices, iniciacion deportiva, aprendizaje de reglas y trabajo de competitividad sana.</p>
+<p class="mt-5 text-sm leading-relaxed text-white/80">Futbol 7, futbol sala, atletismo, balonmano, gimnasia acrobatica, baloncesto, natacion, juegos tradicionales, talleres, fiestas tematicas y ginkanas.</p>
+</div>
+<div class="rounded-[2rem] bg-white p-7 shadow-panel">
+<div class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Instalaciones</div>
+<p class="mt-4 text-sm leading-relaxed text-muted">Pabellones cubiertos, pistas polideportivas exteriores, campo de futbol de hierba sintetica, piscina cubierta, pista de atletismo, gimnasio deportivo y sala de usos multiples.</p>
+<p class="mt-4 text-sm font-semibold text-ink">Carretera de Alfacar 21, 18011, Granada</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="py-24 bg-surface-container-low" id="info">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-<div class="lg:col-span-5 flex flex-col justify-center">
-<h2 class="text-4xl md:text-5xl font-black text-on-surface italic leading-tight mb-8">REQUISITOS Y <br><span class="text-primary-container">HORARIOS</span></h2>
-<div class="space-y-6">
-<div class="bg-surface p-6 rounded-xl">
-<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
-<span class="material-symbols-outlined">group</span> Edades y grupos
-                                </h4>
-<ul class="space-y-2 text-on-surface-variant">
-<li class="flex justify-between"><span>Grupo A:</span> <span class="font-bold">4-6 años (2022-2020)</span></li>
-<li class="flex justify-between"><span>Grupo B:</span> <span class="font-bold">7-9 años (2019-2017)</span></li>
-<li class="flex justify-between"><span>Grupo C:</span> <span class="font-bold">10-12 años (2016-2014)</span></li>
-<li class="flex justify-between"><span>Grupo D:</span> <span class="font-bold">13-15 años (2013-2011)</span></li>
-<li class="flex justify-between"><span>Aquagym:</span> <span class="font-bold">Mayores de 16 años</span></li>
+
+<section class="bg-white py-20" id="intensivos">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="grid gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-end">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.22em] text-primary">Cursos de junio</p>
+<h2 class="mt-3 text-3xl font-black leading-tight tracking-tight md:text-5xl">Dos programas de tarde con inscripcion independiente.</h2>
+</div>
+<p class="max-w-2xl text-base leading-relaxed text-muted">Los intensivos de natacion y el aquagym comparten fechas generales, pero no son el mismo servicio. Aqui quedan separados por publico, horario y precio.</p>
+</div>
+<div class="mt-10 grid gap-6 lg:grid-cols-2">
+<article class="rounded-[2rem] border border-line bg-primary-soft p-7 shadow-panel">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Intensivo de natacion</p>
+<h3 class="mt-3 text-2xl font-black tracking-tight text-ink">Para ninos y ninas de 3 a 15 anos</h3>
+</div>
+<span class="rounded-full bg-white px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-primary">32 EUR</span>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-muted">Programa semanal de natacion con turnos de una hora, de lunes a viernes, organizado por nivel de aprendizaje.</p>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">
+<div class="rounded-2xl bg-white/80 p-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Fechas</div>
+<div class="mt-2 text-sm font-bold text-ink">8 - 26 junio de 2026</div>
+</div>
+<div class="rounded-2xl bg-white/80 p-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Horarios</div>
+<div class="mt-2 text-sm font-bold text-ink">17:00 - 18:00 y 18:00 - 19:00</div>
+</div>
+<div class="rounded-2xl bg-white/80 p-4 sm:col-span-2">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Niveles</div>
+<div class="mt-2 text-sm leading-relaxed text-ink">Infantil en vaso de ensenanza, iniciacion en calle 1 y perfeccionamiento en calle 2.</div>
+</div>
+</div>
+<div class="mt-6 rounded-2xl bg-white p-5">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Turnos semanales</div>
+<ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink">
+<li>1o turno: 8 - 12 junio</li>
+<li>2o turno: 15 - 19 junio</li>
+<li>3o turno: 22 - 26 junio</li>
 </ul>
-<p class="mt-4 text-xs text-on-surface-variant">Niveles de natación: Infantil (vaso enseñanza), Iniciación (calle 1) y Perfeccionamiento (calle 2).</p>
 </div>
-<div class="bg-surface p-6 rounded-xl">
-<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
-<span class="material-symbols-outlined">schedule</span> Horarios oficiales
-                                </h4>
-<p class="text-on-surface-variant text-sm">Servicios diarios y sesiones de tarde:</p>
-<div class="flex gap-2 mt-3 flex-wrap">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">08:00-09:00 Aula Matinal</span>
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">09:00-14:00 Campamento</span>
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">14:00-15:00 Comedor</span>
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">17:00-19:00 Natación</span>
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">19:00-20:00 Aquagym</span>
+</article>
+<article class="rounded-[2rem] border border-line bg-sand p-7 shadow-panel">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Aquagym</p>
+<h3 class="mt-3 text-2xl font-black tracking-tight text-ink">Programa semanal para mayores de 16 anos</h3>
+</div>
+<span class="rounded-full bg-white px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-primary">22 EUR</span>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-muted">Ejercicio aerobico en el agua, principalmente en vertical, sin necesidad de nadar y acompanado por diferentes estilos de musica.</p>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">
+<div class="rounded-2xl bg-white/70 p-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Fechas</div>
+<div class="mt-2 text-sm font-bold text-ink">8 - 26 junio de 2026</div>
+</div>
+<div class="rounded-2xl bg-white/70 p-4">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Horario</div>
+<div class="mt-2 text-sm font-bold text-ink">19:00 - 20:00</div>
+</div>
+<div class="rounded-2xl bg-white/70 p-4 sm:col-span-2">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Piscina</div>
+<div class="mt-2 text-sm leading-relaxed text-ink">Se imparte en el vaso de ensenanza de la Facultad de Ciencias del Deporte.</div>
+</div>
+</div>
+<div class="mt-6 overflow-hidden rounded-[1.6rem]">
+<img alt="Actividad acuatica en piscina cubierta" class="h-[220px] w-full object-cover" src="./assets/fotos/actividad-acuatica.jpg">
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="bg-surface py-20" id="tarifas">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.22em] text-primary">Tarifas y condiciones</p>
+<h2 class="mt-3 text-3xl font-black leading-tight tracking-tight md:text-5xl">Precios claros, separados por servicio.</h2>
+</div>
+<p class="max-w-2xl text-base leading-relaxed text-muted">La tarifa UGR bonificada se aplica a hijos, PDI y PTGAS de la UGR. Documentacion necesaria: TUI y libro de familia.</p>
+</div>
+<div class="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+<div class="rounded-[2rem] bg-white p-7 shadow-panel">
+<div class="grid gap-4 md:grid-cols-2">
+<div class="rounded-[1.5rem] border border-line p-5">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Campamento corto</div>
+<div class="mt-3 text-4xl font-black tracking-tight text-ink">65 / 70 EUR</div>
+<p class="mt-3 text-sm leading-relaxed text-muted">Tarifa UGR y tarifa general para el 1o turno de junio y el 7o turno de septiembre.</p>
+</div>
+<div class="rounded-[1.5rem] bg-primary p-5 text-white shadow-soft">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-white/72">Campamento semanal</div>
+<div class="mt-3 text-4xl font-black tracking-tight">75 / 85 EUR</div>
+<p class="mt-3 text-sm leading-relaxed text-white/82">Tarifa UGR y tarifa general para los turnos 2o al 6o, de cinco dias completos.</p>
+</div>
+<div class="rounded-[1.5rem] border border-line bg-primary-soft p-5">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Intensivo de natacion</div>
+<div class="mt-3 text-4xl font-black tracking-tight text-ink">32 EUR</div>
+<p class="mt-3 text-sm leading-relaxed text-muted">Precio unico por persona, cinco dias de lunes a viernes.</p>
+</div>
+<div class="rounded-[1.5rem] border border-line bg-sand p-5">
+<div class="text-xs font-extrabold uppercase tracking-[0.14em] text-muted">Aquagym</div>
+<div class="mt-3 text-4xl font-black tracking-tight text-ink">22 EUR</div>
+<p class="mt-3 text-sm leading-relaxed text-muted">Precio unico por persona, cinco dias en horario de 19:00 a 20:00.</p>
 </div>
 </div>
 </div>
+<div class="space-y-5">
+<div class="rounded-[2rem] bg-white p-7 shadow-panel">
+<div class="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Extras del campamento</div>
+<ul class="mt-5 space-y-4 text-sm leading-relaxed text-ink">
+<li class="rounded-2xl bg-surface px-4 py-4">Aula matinal: 20 EUR por semana.</li>
+<li class="rounded-2xl bg-surface px-4 py-4">Comedor: menu de cafeteria. Precio pendiente de confirmacion.</li>
+<li class="rounded-2xl bg-surface px-4 py-4">Dia suelto de campamento + aula matinal: 20 EUR segun disponibilidad.</li>
+</ul>
 </div>
-<div class="lg:col-span-7 grid grid-cols-2 gap-4">
-<div class="col-span-2 relative h-64 rounded-2xl overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="niños en edad escolar en actividad de natación en piscina" src="./assets/fotos/instalaciones-piscina-escolar.jpg">
-<div class="absolute inset-0 bg-primary/20"></div>
-</div>
-<div class="relative rounded-2xl overflow-hidden h-48 bg-primary p-8 flex flex-col justify-end">
-<h4 class="text-white font-black text-xl leading-tight">INSTALACIONES COMPLETAS</h4>
-<p class="text-white/80 text-xs mt-2 leading-relaxed">Pabellones cubiertos, pistas polideportivas exteriores, campo de fútbol de hierba sintética, piscina cubierta, pista de atletismo, gimnasio deportivo y sala de usos múltiples.</p>
-</div>
-<div class="relative rounded-2xl overflow-hidden h-48">
-<img class="w-full h-full object-cover" data-alt="niños en actividad deportiva de campamento al aire libre" src="./assets/fotos/instalaciones-campamento.jpg">
+<div class="rounded-[2rem] bg-primary-strong p-7 text-white shadow-soft">
+<div class="text-xs font-extrabold uppercase tracking-[0.18em] text-white/72">Importante</div>
+<p class="mt-4 text-sm leading-relaxed text-white/84">La informacion del comedor no esta cerrada todavia. El correo recibido indica que solo falta por confirmar el precio de los menus, por lo que se muestra como pendiente.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="py-16 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<div class="bg-surface-container-high rounded-3xl p-12 text-center max-w-4xl mx-auto">
-<h3 class="text-3xl font-black text-on-surface italic mb-4">RESERVA TU PLAZA</h3>
-<p class="text-on-surface-variant mb-10 text-lg">Extras: aula matinal 20€/semana, comedor (menú cafetería) y día suelto + aula matinal 20€ según disponibilidad.</p>
-<a class="inline-flex items-center gap-3 bg-primary-container text-white px-12 py-5 rounded-full text-xl font-black hover:shadow-2xl transition-all active:scale-95" href="mailto:escuelasdeportivas@ugr.es">
-<span class="material-symbols-outlined">mail</span>
-                        escuelasdeportivas@ugr.es
-                    </a>
-</div>
-<div class="bg-surface-container-high rounded-3xl p-8 mt-8 max-w-4xl mx-auto text-center flex flex-col items-center">
-<h3 class="text-2xl font-black text-on-surface italic mb-6">HOJA DE INSCRIPCIÓN</h3>
-<a class="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-full text-base font-black hover:shadow-xl transition-all active:scale-95" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined">description</span>
-                        IR A LA HOJA DE INSCRIPCIÓN
-                    </a>
+
+<section class="bg-white py-20" id="inscripcion">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="rounded-[2.25rem] bg-[linear-gradient(135deg,#00495d_0%,#00586f_52%,#1a7f98_100%)] p-8 text-white shadow-soft md:p-12">
+<div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[0.22em] text-white/72">Inscripciones</p>
+<h2 class="mt-3 text-3xl font-black leading-tight tracking-tight md:text-5xl">Antes de abrir el formulario, ten claro que servicio vas a solicitar.</h2>
+<p class="mt-5 max-w-[58ch] text-base leading-relaxed text-white/82">La inscripcion se centraliza mediante la hoja de inscripcion. Si necesitas aclarar disponibilidad, grupos o documentacion, tambien puedes contactar por correo con la oficina deportiva.</p>
+<div class="mt-8 flex flex-wrap gap-4">
+<a class="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-primary transition duration-300 hover:-translate-y-[1px] active:scale-[0.98]" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">Ir a la hoja de inscripcion</a>
+<a class="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white transition duration-300 hover:bg-white/14 active:scale-[0.98]" href="mailto:escuelasdeportivas@ugr.es">Escribir por correo</a>
 </div>
 </div>
-</section>
-<section class="py-24 bg-surface" id="categories">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="text-4xl md:text-5xl font-black text-primary italic mb-4">GRUPOS Y PLAZAS</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Plazas por turno en campamentos y programa complementario de aquagym.</p>
+<div class="grid gap-4 md:grid-cols-2">
+<div class="glass-panel rounded-[1.75rem] p-5 text-ink">
+<div class="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Paso 1</div>
+<h3 class="mt-3 text-lg font-black tracking-tight">Elige el servicio</h3>
+<p class="mt-3 text-sm leading-relaxed text-muted">Campamento, intensivo de natacion o aquagym. Cada uno tiene edad, horario y tarifa propios.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-16">
-<div class="bg-surface-container-highest p-6 rounded-xl text-center">
-<div class="material-symbols-outlined text-4xl text-primary mb-3">child_care</div>
-<div class="font-bold uppercase text-xs tracking-widest mb-1">4-6 años</div>
-<div class="text-xl font-black text-primary-container">30 plazas</div>
+<div class="glass-panel rounded-[1.75rem] p-5 text-ink">
+<div class="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Paso 2</div>
+<h3 class="mt-3 text-lg font-black tracking-tight">Selecciona turno y extras</h3>
+<p class="mt-3 text-sm leading-relaxed text-muted">En campamentos debes indicar turno, aula matinal, comedor o dia suelto. En intensivos, el turno semanal.</p>
 </div>
-<div class="bg-surface-container-highest p-6 rounded-xl text-center">
-<div class="material-symbols-outlined text-4xl text-primary mb-3">school</div>
-<div class="font-bold uppercase text-xs tracking-widest mb-1">7-9 años</div>
-<div class="text-xl font-black text-primary-container">40 plazas</div>
+<div class="glass-panel rounded-[1.75rem] p-5 text-ink">
+<div class="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Paso 3</div>
+<h3 class="mt-3 text-lg font-black tracking-tight">Prepara los datos</h3>
+<p class="mt-3 text-sm leading-relaxed text-muted">Nombre, DNI, fecha de nacimiento, domicilio, telefono, observaciones medicas y datos del tutor si corresponde.</p>
 </div>
-<div class="bg-surface-container-highest p-6 rounded-xl text-center">
-<div class="material-symbols-outlined text-4xl text-primary mb-3">sports_score</div>
-<div class="font-bold uppercase text-xs tracking-widest mb-1">10-12 años</div>
-<div class="text-xl font-black text-primary-container">40 plazas</div>
-</div>
-<div class="bg-surface-container-highest p-6 rounded-xl text-center">
-<div class="material-symbols-outlined text-4xl text-primary mb-3">stars</div>
-<div class="font-bold uppercase text-xs tracking-widest mb-1">13-15 años</div>
-<div class="text-xl font-black text-primary-container">20 plazas</div>
-</div>
-<div class="bg-surface-container-highest p-6 rounded-xl text-center">
-<div class="material-symbols-outlined text-4xl text-primary mb-3">pool</div>
-<div class="font-bold uppercase text-xs tracking-widest mb-1">Aquagym</div>
-<div class="text-xl font-black text-primary-container">+16 años</div>
-</div>
-</div>
-<div class="bg-primary text-on-primary rounded-3xl p-10 flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
-<div class="flex-1 relative z-10">
-<h3 class="text-3xl font-black italic mb-6">ACTIVIDADES Y SERVICIOS</h3>
-<p class="text-base text-primary-fixed mb-3">Actividades de 9:00 a 14:00: desarrollo de habilidades motoras y psicomotrices, iniciación en deportes grupales e individuales, explicación de reglas específicas y aprendizaje de la competitividad sana.</p>
-<p class="text-lg text-primary-fixed mb-3">Fútbol 7, fútbol sala, atletismo, balonmano, gimnasia acrobática, baloncesto, natación, juegos tradicionales, talleres, fiestas temáticas y ginkanas.</p>
-<p class="text-sm text-primary-fixed/90 mb-6">Instalaciones: pabellones cubiertos, pistas polideportivas exteriores, campo de fútbol de hierba sintética, piscina cubierta, pista de atletismo, gimnasio deportivo y sala de usos múltiples.</p>
-<div class="flex gap-4">
-<div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-<span class="material-symbols-outlined text-secondary-fixed">wb_sunny</span>
-<span class="text-sm font-bold">AULA MATINAL</span>
-</div>
-<div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-<span class="material-symbols-outlined text-secondary-fixed">restaurant</span>
-<span class="text-sm font-bold">COMEDOR</span>
+<div class="glass-panel rounded-[1.75rem] p-5 text-ink">
+<div class="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Contacto</div>
+<h3 class="mt-3 text-lg font-black tracking-tight">Oficina deportiva</h3>
+<p class="mt-3 text-sm leading-relaxed text-muted">Correo: escuelasdeportivas@ugr.es<br>Oficina: lunes y miercoles de 11:30 a 13:30. Martes y jueves de 16:30 a 18:30.</p>
 </div>
 </div>
 </div>
-<div class="w-full md:w-1/3 relative z-10">
-<div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-<h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-primary-fixed">Importante</h4>
-<p class="text-sm text-white/80">Mínimo 10 inscritos para abrir cada grupo y también para abrir servicios opcionales. Tarifa UGR bonificada para hijos, PDI y PTGAS (TUI + libro de familia).</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-4xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="text-4xl md:text-5xl font-black text-on-surface italic mb-4">HORARIOS DIARIOS</h2>
-<p class="text-on-surface-variant">Programación diaria de campamento e intensivos.</p>
-</div>
-<div class="space-y-4">
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">08:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Aula Matinal</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Servicio opcional de 8:00 a 9:00.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">09:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Inicio de Campamento</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Actividades deportivas y psicomotrices hasta las 14:00.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">14:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Comedor</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Servicio opcional de 14:00 a 15:00 (menú cafetería).</p>
-</div>
-</div>
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">17:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Intensivo Natación (turno 1)</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Sesión de 17:00 a 18:00 para edades de 3 a 15 años.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">18:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Intensivo Natación (turno 2)</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Sesión de 18:00 a 19:00 para niveles iniciación y perfeccionamiento.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 bg-surface p-6 rounded-2xl group hover:bg-primary-container transition-all duration-300">
-<div class="text-2xl font-black text-primary group-hover:text-white w-20">19:00</div>
-<div class="w-px h-10 bg-outline-variant/30 group-hover:bg-white/30"></div>
-<div class="flex-1">
-<h4 class="font-bold text-on-surface group-hover:text-white">Aquagym (+16)</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/80">Sesión semanal de 19:00 a 20:00.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-surface" id="registration">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col items-center mb-16 text-center">
-<h2 class="text-4xl md:text-5xl font-black text-primary italic mb-6">INSCRIPCIONES Y TARIFAS</h2>
-<p class="text-on-surface-variant max-w-2xl mb-8">Contacto de inscripción: escuelasdeportivas@ugr.es. Oficina: lunes y miércoles de 11:30 a 13:30, martes y jueves de 16:30 a 18:30.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-<div class="bg-surface-container p-8 rounded-3xl border border-transparent hover:border-primary-container transition-all text-center flex flex-col">
-<div class="text-sm font-bold text-primary mb-2 uppercase tracking-widest">TURNO CORTO CAMPAMENTO</div>
-<div class="text-5xl font-black text-on-surface mb-6">65/70€</div>
-<p class="text-on-surface-variant text-sm mb-8 flex-1">Tarifa UGR/general para 1er turno (23-26 junio) y 7o turno (1-4 septiembre).</p>
-<a class="w-full inline-flex justify-center py-3 rounded-full bg-primary text-on-primary font-bold text-sm uppercase tracking-wider" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">Solicitar plaza</a>
-</div>
-<div class="bg-primary text-on-primary p-8 rounded-3xl shadow-2xl scale-105 relative overflow-hidden text-center flex flex-col">
-<div class="absolute top-4 right-4 rotate-12">
-<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-[10px] font-black uppercase">RECOMENDADO</span>
-</div>
-<div class="text-sm font-bold text-primary-fixed mb-2 uppercase tracking-widest">TURNO SEMANAL CAMPAMENTO</div>
-<div class="text-5xl font-black text-white mb-6">75/85€</div>
-<p class="text-primary-fixed text-sm mb-8 flex-1">Tarifa UGR/general para turnos 2o al 6o (de 5 días).</p>
-<a class="w-full inline-flex justify-center py-3 rounded-full bg-white text-primary font-black text-sm uppercase tracking-wider" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">Solicitar plaza</a>
-</div>
-<div class="bg-surface-container p-8 rounded-3xl border border-transparent hover:border-primary-container transition-all text-center flex flex-col">
-<div class="text-sm font-bold text-primary mb-2 uppercase tracking-widest">INTENSIVO NATACIÓN</div>
-<div class="text-5xl font-black text-on-surface mb-6">32€</div>
-<p class="text-on-surface-variant text-sm mb-8 flex-1">Precio único por persona: 5 días de lunes a viernes.</p>
-<a class="w-full inline-flex justify-center py-3 rounded-full bg-outline text-white font-bold text-sm uppercase tracking-wider" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">Solicitar plaza</a>
-</div>
-<div class="bg-surface-container p-8 rounded-3xl border border-transparent hover:border-primary-container transition-all text-center flex flex-col">
-<div class="text-sm font-bold text-primary mb-2 uppercase tracking-widest">AQUAGYM</div>
-<div class="text-5xl font-black text-on-surface mb-6">22€</div>
-<p class="text-on-surface-variant text-sm mb-8 flex-1">Precio único por persona: 5 días en horario de 19:00 a 20:00.</p>
-<a class="w-full inline-flex justify-center py-3 rounded-full bg-secondary text-on-secondary font-bold text-sm uppercase tracking-wider" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">Solicitar plaza</a>
-</div>
-</div>
-<div class="bg-surface-container-high rounded-3xl p-8 mb-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-<h3 class="text-2xl font-black text-on-surface italic mb-6">HOJA DE INSCRIPCIÓN</h3>
-<a class="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-full text-base font-black hover:shadow-xl transition-all active:scale-95" href="https://happier.ebone.es/f/hoja-de-inscripcion" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined">description</span>
-                        IR A LA HOJA DE INSCRIPCIÓN
-                    </a>
 </div>
 </div>
 </section>
 </main>
-<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t-0">
-<div class="flex flex-col items-center gap-8 px-4 w-full text-center">
-<div class="font-bold text-cyan-800 dark:text-cyan-200 text-2xl font-headline tracking-tight uppercase">
-                UGR DEPORTES
-            </div>
-<div class="flex gap-8 font-['Lexend'] text-sm uppercase tracking-widest">
-<a class="text-slate-500 hover:text-cyan-600 transition-colors" href="#">Política de privacidad</a>
-<a class="text-slate-500 hover:text-cyan-600 transition-colors" href="mailto:escuelasdeportivas@ugr.es">Contacto</a>
-<a class="text-slate-500 hover:text-cyan-600 transition-colors" href="#">Condiciones de servicio</a>
+
+<footer class="border-t border-line bg-surface-soft py-10">
+<div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 md:flex-row md:items-end md:justify-between md:px-8">
+<div>
+<div class="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Facultad de Ciencias del Deporte</div>
+<div class="mt-2 text-2xl font-black tracking-tight text-ink">Proyecto Social Deportivo 2026</div>
+<p class="mt-3 max-w-xl text-sm leading-relaxed text-muted">Landing reordenada para distinguir con claridad campamentos de verano, intensivos de natacion y aquagym sin modificar el tono general del proyecto.</p>
 </div>
-<p class="text-slate-500 dark:text-slate-500 font-['Lexend'] text-sm uppercase tracking-widest max-w-md">
-                © 2026 Facultad de Ciencias del Deporte (UGR)
-            </p>
-<div class="flex gap-6 mt-4">
-<span class="material-symbols-outlined text-cyan-700">social_leaderboard</span>
-<span class="material-symbols-outlined text-cyan-700">share</span>
-<span class="material-symbols-outlined text-cyan-700">alternate_email</span>
+<div class="text-sm leading-relaxed text-muted">
+<div>Contacto: <a class="font-semibold text-primary transition-colors hover:text-primary-strong" href="mailto:escuelasdeportivas@ugr.es">escuelasdeportivas@ugr.es</a></div>
+<div class="mt-1">Granada · Facultad de Ciencias del Deporte</div>
 </div>
 </div>
 </footer>
 </body>
 </html>
-
