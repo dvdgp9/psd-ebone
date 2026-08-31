@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto Social Deportivo | Verano 2026</title>
+<meta name="description" content="Actividades acuáticas y deportivas del Proyecto Social Deportivo para la temporada 2026-2027.">
+<title>Temporada 2026-2027 | Proyecto Social Deportivo</title>
+<link href="./assets/Logo_principal.png" rel="icon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="./styles.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
@@ -15,10 +18,8 @@ tailwind.config = {
         primary: "#1f9348",
         "primary-strong": "#146f35",
         "primary-soft": "#e9f7ec",
-        secondary: "#35a8cf",
-        "secondary-soft": "#e7f5fb",
-        tertiary: "#ee6c2d",
-        "tertiary-soft": "#fff1e4",
+        secondary: "#27809a",
+        "secondary-soft": "#e7f5f7",
         surface: "#f7fbf5",
         "surface-soft": "#eef6ef",
         ink: "#183124",
@@ -30,186 +31,194 @@ tailwind.config = {
         body: ["Manrope", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 24px 60px -32px rgba(31, 147, 72, 0.32)",
-        panel: "0 18px 45px -30px rgba(24, 49, 36, 0.22)"
+        soft: "0 24px 60px -32px rgba(18, 51, 35, 0.42)",
+        panel: "0 18px 45px -30px rgba(24, 49, 36, 0.24)"
       }
     }
   }
 };
 </script>
-<style>
-html { scroll-behavior: smooth; }
-body { font-family: "Manrope", sans-serif; }
-h1, h2, h3, h4, .font-headline { font-family: "Lexend", sans-serif; letter-spacing: 0; }
-.reveal { opacity: 0; transform: translateY(16px); animation: rise .7s cubic-bezier(.16,1,.3,1) forwards; }
-.delay-1 { animation-delay: .08s; }
-.delay-2 { animation-delay: .16s; }
-.delay-3 { animation-delay: .24s; }
-@keyframes rise { to { opacity: 1; transform: translateY(0); } }
-</style>
 </head>
 <body class="bg-surface text-ink selection:bg-primary selection:text-white">
-<nav class="fixed inset-x-0 top-0 z-40 border-b border-white/20 bg-[#123323]/85 backdrop-blur-xl">
-<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
-<a class="flex items-center gap-3" href="index.html">
-<img src="./assets/Logo_principal.png" alt="Proyecto Social Deportivo" class="h-14 w-auto object-contain">
-<span class="hidden text-sm font-extrabold uppercase tracking-[0.14em] text-white md:block">Proyecto Social Deportivo</span>
-</a>
-<div class="hidden items-center gap-5 text-sm font-bold text-white/90 lg:flex">
-<a class="rounded-full bg-white/10 px-3 py-2 text-white transition hover:bg-white/20" href="index.html">Inicio</a>
-<a class="rounded-full px-3 py-2 text-white/90 transition hover:bg-white/10 hover:text-white" href="campamentos.html">Campamentos</a>
-<a class="rounded-full px-3 py-2 text-white/90 transition hover:bg-white/10 hover:text-white" href="intensivos-natacion.html">Natación intensiva</a>
-<a class="rounded-full px-3 py-2 text-white/90 transition hover:bg-white/10 hover:text-white" href="aquagym.html">Aquagym</a>
-<a class="rounded-full px-3 py-2 text-white/90 transition hover:bg-white/10 hover:text-white" href="natacion-escolar.html">Natación escolar</a>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+<nav class="fixed inset-x-0 top-0 z-40 border-b border-white/15 bg-[#123323]/90 backdrop-blur-xl" aria-label="Navegación principal">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
+<a class="flex min-w-0 items-center gap-3" href="index.html" aria-label="Proyecto Social Deportivo, inicio">
+<img src="./assets/Logo_principal.png" alt="Proyecto Social Deportivo" class="h-14 w-auto shrink-0 object-contain">
+<span class="hidden truncate text-sm font-extrabold uppercase tracking-[0.12em] text-white md:block">Proyecto Social Deportivo</span>
+</a>
+<div class="hidden items-center gap-2 text-sm font-bold text-white/90 lg:flex">
+<a class="rounded-full bg-white/10 px-4 py-2 text-white transition hover:bg-white/20 active:scale-[0.98]" href="index.html">Inicio</a>
+<a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white active:scale-[0.98]" href="actividades-infantiles.html">Niños y niñas</a>
+<a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white active:scale-[0.98]" href="actividades-adultos.html">Adultos</a>
+<a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white active:scale-[0.98]" href="#tarifas">Tarifas</a>
 </div>
-<a class="rounded-full bg-white px-5 py-2.5 text-sm font-black text-primary transition hover:-translate-y-[1px] active:scale-[0.98]" href="#servicios">Elegir servicio</a>
+<a class="shrink-0 rounded-full bg-white px-4 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-primary transition hover:-translate-y-[1px] active:scale-[0.98] sm:px-5 sm:text-sm" href="#contacto">Contacto</a>
 </div>
 </nav>
 
-<header class="relative flex min-h-[92dvh] items-end overflow-hidden pt-24">
+<header class="relative flex min-h-[86dvh] items-end overflow-hidden pt-24">
 <div class="absolute inset-0">
-<img src="./assets/fotos/hero-campamento.jpg" alt="Niños y monitores en actividades deportivas de verano" class="h-full w-full object-cover">
-<div class="absolute inset-0 bg-[linear-gradient(96deg,rgba(18,51,35,0.94)_0%,rgba(31,147,72,0.78)_44%,rgba(24,49,36,0.22)_100%)]"></div>
+<img src="./assets/fotos/hero-campamento.jpg" alt="Participantes realizando actividades deportivas en las instalaciones" class="h-full w-full object-cover">
+<div class="hero-overlay absolute inset-0"></div>
 </div>
-<div class="relative mx-auto grid w-full max-w-7xl gap-8 px-5 pb-10 pt-16 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-<div class="pb-4">
-<p class="reveal inline-flex items-center gap-2 rounded-full bg-white/[0.12] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
-<span class="material-symbols-outlined text-base">sports_soccer</span>
-Verano 2026
-</p>
-<h1 class="reveal delay-1 mt-6 max-w-3xl text-4xl font-black leading-none text-white md:text-6xl">Proyecto Social Deportivo: cuatro servicios para vivir el deporte este verano.</h1>
-<p class="reveal delay-2 mt-6 max-w-2xl text-lg leading-relaxed text-white/90">Campamentos, natación intensiva, aquagym y natación escolar en una web clara para familias, niños, niñas y personas adultas. Consulta fechas, horarios y precios, y solicita plaza en el programa que mejor encaje contigo.</p>
+<div class="relative mx-auto grid w-full max-w-7xl gap-8 px-5 pb-12 pt-16 md:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
+<div class="pb-2">
+<p class="reveal inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">Temporada 2026-2027</p>
+<h1 class="reveal delay-1 mt-6 max-w-3xl text-4xl font-black leading-none tracking-tight text-white md:text-6xl">Actividades acuáticas y deportivas para todas las edades.</h1>
+<p class="reveal delay-2 mt-6 max-w-2xl text-lg leading-relaxed text-white/90">Del 6 de octubre de 2026 al 27 de mayo de 2027. Consulta horarios, periodos y tarifas del Proyecto Social Deportivo de la Facultad de Ciencias del Deporte.</p>
 <div class="reveal delay-3 mt-8 flex flex-wrap gap-3">
-<a class="rounded-full bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.1em] text-primary transition hover:-translate-y-[1px] hover:shadow-soft active:scale-[0.98]" href="#servicios">Ver servicios</a>
-<a class="rounded-full border border-white/30 bg-white/[0.08] px-7 py-4 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white/[0.15] active:scale-[0.98]" href="#inscripcion">Información e inscripción</a>
+<a class="rounded-full bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.1em] text-primary transition hover:-translate-y-[1px] hover:shadow-soft active:scale-[0.98]" href="#programas">Elegir programa</a>
+<a class="rounded-full border border-white/25 bg-white/10 px-7 py-4 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white/15 active:scale-[0.98]" href="#periodos">Ver periodos</a>
 </div>
 </div>
-<section id="servicios" class="reveal delay-2 grid gap-4 sm:grid-cols-2">
-<a class="group min-h-[250px] overflow-hidden rounded-lg bg-white p-5 shadow-panel transition hover:-translate-y-1" href="campamentos.html">
-<div class="flex items-start justify-between gap-4">
+
+<section id="programas" class="reveal delay-2 grid gap-4 sm:grid-cols-2" aria-label="Programas por edades">
+<a class="audience-card group flex min-h-[300px] flex-col justify-between overflow-hidden rounded-xl bg-white p-6 shadow-panel" href="actividades-infantiles.html">
 <div>
-<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Campamentos</p>
-<h2 class="mt-3 text-2xl font-black text-ink">Campamento de verano</h2>
+<div class="flex items-start justify-between gap-4">
+<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">De 3 a 15 años</p>
+<span class="material-symbols-outlined text-3xl text-primary transition group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
 </div>
-<span class="material-symbols-outlined text-3xl text-primary transition group-hover:translate-x-1">arrow_forward</span>
+<h2 class="mt-5 text-3xl font-black leading-tight text-ink">Niños y niñas</h2>
+<p class="mt-4 leading-relaxed text-muted">Natación, multideporte, fútbol, judo, gimnasia y baloncesto organizados por edades.</p>
 </div>
-<p class="mt-5 text-sm leading-relaxed text-muted">Para niños y niñas de 4 a 15 años. Deporte, juegos, convivencia y servicios opcionales para facilitar la organización familiar.</p>
-<div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-<div><p class="font-bold text-primary">Fechas</p><p class="mt-1 text-muted">23 jun - 4 sept</p></div>
-<div><p class="font-bold text-primary">Desde</p><p class="mt-1 text-muted">75 EUR</p></div>
-</div>
+<p class="mt-8 border-t border-line pt-4 text-sm font-extrabold text-primary">Consultar actividades y horarios</p>
 </a>
-<a class="group min-h-[250px] overflow-hidden rounded-lg bg-secondary-soft p-5 shadow-panel transition hover:-translate-y-1" href="intensivos-natacion.html">
-<div class="flex items-start justify-between gap-4">
+
+<a class="audience-card group flex min-h-[300px] flex-col justify-between overflow-hidden rounded-xl bg-secondary-soft p-6 shadow-panel" href="actividades-adultos.html">
 <div>
-<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Natación intensiva</p>
-<h2 class="mt-3 text-2xl font-black text-ink">Aprender y ganar seguridad</h2>
-</div>
-<span class="material-symbols-outlined text-3xl text-primary transition group-hover:translate-x-1">arrow_forward</span>
-</div>
-<p class="mt-5 text-sm leading-relaxed text-muted">Cursos intensivos de tarde para niños y niñas de 3 a 15 años, organizados por niveles y en turnos semanales.</p>
-<div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-<div><p class="font-bold text-primary">Fechas</p><p class="mt-1 text-muted">8 - 26 jun</p></div>
-<div><p class="font-bold text-primary">Precio</p><p class="mt-1 text-muted">32 EUR</p></div>
-</div>
-</a>
-<a class="group min-h-[250px] overflow-hidden rounded-lg bg-tertiary-soft p-5 shadow-panel transition hover:-translate-y-1" href="aquagym.html">
 <div class="flex items-start justify-between gap-4">
-<div>
-<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Aquagym</p>
-<h2 class="mt-3 text-2xl font-black text-ink">Actividad acuática +16</h2>
+<p class="text-xs font-black uppercase tracking-[0.16em] text-secondary">Mayores de 16 años</p>
+<span class="material-symbols-outlined text-3xl text-secondary transition group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
 </div>
-<span class="material-symbols-outlined text-3xl text-primary transition group-hover:translate-x-1">arrow_forward</span>
+<h2 class="mt-5 text-3xl font-black leading-tight text-ink">Adultos</h2>
+<p class="mt-4 leading-relaxed text-muted">Natación, aquagym, sala de musculación y actividades dirigidas en distintos horarios.</p>
 </div>
-<p class="mt-5 text-sm leading-relaxed text-muted">Para personas mayores de 16 años que buscan moverse, cuidarse y disfrutar del ejercicio en el agua.</p>
-<div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-<div><p class="font-bold text-primary">Horario</p><p class="mt-1 text-muted">19:00 - 20:00</p></div>
-<div><p class="font-bold text-primary">Precio</p><p class="mt-1 text-muted">22 EUR</p></div>
-</div>
-</a>
-<a class="group min-h-[250px] overflow-hidden rounded-lg bg-white p-5 shadow-panel transition hover:-translate-y-1" href="natacion-escolar.html">
-<div class="flex items-start justify-between gap-4">
-<div>
-<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Natación escolar</p>
-<h2 class="mt-3 text-2xl font-black text-ink">Piscina para Infantil y Primaria</h2>
-</div>
-<span class="material-symbols-outlined text-3xl text-primary transition group-hover:translate-x-1">arrow_forward</span>
-</div>
-<p class="mt-5 text-sm leading-relaxed text-muted">Natación para alumnado de Educación Infantil y Primaria, organizada por edad y competencia en piscina.</p>
-<div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-<div><p class="font-bold text-primary">Fechas</p><p class="mt-1 text-muted">4 may - 19 jun</p></div>
-<div><p class="font-bold text-primary">Desde</p><p class="mt-1 text-muted">15 EUR</p></div>
-</div>
+<p class="mt-8 border-t border-[#c8dde2] pt-4 text-sm font-extrabold text-secondary">Consultar actividades y horarios</p>
 </a>
 </section>
 </div>
 </header>
 
-<main>
-<section class="bg-white py-16">
-<div class="mx-auto grid max-w-7xl gap-8 px-5 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-<div>
-<p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Proyecto Social Deportivo</p>
-<h2 class="mt-3 max-w-2xl text-3xl font-black leading-tight md:text-5xl">Elige el servicio adecuado con toda la información a mano.</h2>
+<main id="contenido">
+<section id="periodos" class="bg-white py-16 md:py-20">
+<div class="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+<div class="lg:sticky lg:top-28">
+<p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Periodos bimestrales</p>
+<h2 class="mt-3 text-3xl font-black leading-tight md:text-5xl">Cuatro turnos durante el curso.</h2>
+<p class="mt-5 max-w-xl leading-relaxed text-muted">Las tarifas se aplican por periodo bimestral. El calendario comprende desde octubre de 2026 hasta mayo de 2027.</p>
 </div>
-<div class="grid gap-4 sm:grid-cols-2">
-<div class="rounded-lg border border-line bg-surface p-5">
-<h3 class="font-headline text-lg font-black">Servicios separados y fáciles de comparar</h3>
-<p class="mt-3 text-sm leading-relaxed text-muted">Cada programa tiene su propia página con edad o público, fechas, horarios, precios y condiciones.</p>
-</div>
-<div class="rounded-lg border border-line bg-surface p-5">
-<h3 class="font-headline text-lg font-black">Inscripción por servicio</h3>
-<p class="mt-3 text-sm leading-relaxed text-muted">Cada página tiene su formulario específico. También puedes escribir a la oficina deportiva para resolver dudas antes de solicitar plaza.</p>
-</div>
-</div>
+<ol class="divide-y divide-line border-y border-line">
+<li class="grid gap-2 py-6 sm:grid-cols-[5rem_1fr] sm:items-baseline">
+<span class="text-sm font-black uppercase tracking-[0.14em] text-primary">1.º turno</span>
+<p class="font-headline text-2xl font-black">6 de octubre - 26 de noviembre</p>
+</li>
+<li class="grid gap-2 py-6 sm:grid-cols-[5rem_1fr] sm:items-baseline">
+<span class="text-sm font-black uppercase tracking-[0.14em] text-primary">2.º turno</span>
+<p class="font-headline text-2xl font-black">30 de noviembre - 28 de enero</p>
+</li>
+<li class="grid gap-2 py-6 sm:grid-cols-[5rem_1fr] sm:items-baseline">
+<span class="text-sm font-black uppercase tracking-[0.14em] text-primary">3.º turno</span>
+<p class="font-headline text-2xl font-black">1 de febrero - 1 de abril</p>
+</li>
+<li class="grid gap-2 py-6 sm:grid-cols-[5rem_1fr] sm:items-baseline">
+<span class="text-sm font-black uppercase tracking-[0.14em] text-primary">4.º turno</span>
+<p class="font-headline text-2xl font-black">5 de abril - 27 de mayo</p>
+</li>
+</ol>
 </div>
 </section>
 
-<section id="inscripcion" class="bg-surface py-16">
+<section id="tarifas" class="bg-surface py-16 md:py-20">
 <div class="mx-auto max-w-7xl px-5 md:px-8">
-<div class="grid gap-8 rounded-lg bg-[linear-gradient(135deg,#146f35_0%,#1f9348_54%,#35a8cf_100%)] p-8 text-white shadow-soft md:p-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-<div>
-<p class="text-xs font-black uppercase tracking-[0.18em] text-white/80">Inscripción y dudas</p>
-<h2 class="mt-3 text-3xl font-black leading-tight md:text-5xl">Consulta el servicio, inscríbete o resuelve dudas.</h2>
-<p class="mt-5 max-w-2xl leading-relaxed text-white/90">El Proyecto Social Deportivo centraliza la información y el contacto para dudas sobre disponibilidad, turnos, documentación o servicios opcionales.</p>
+<div class="max-w-3xl">
+<p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Tarifas bimestrales</p>
+<h2 class="mt-3 text-3xl font-black leading-tight md:text-5xl">Precios por público y actividad.</h2>
+<p class="mt-5 leading-relaxed text-muted">La tarifa reducida se aplica a personas de la Zona Norte y a la comunidad UGR. Desliza las tablas lateralmente en pantallas pequeñas.</p>
 </div>
-<div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
-<a class="inline-flex items-center justify-center rounded-full bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.1em] text-primary transition hover:-translate-y-[1px] active:scale-[0.98]" href="#servicios">Elegir servicio</a>
-<a class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/[0.08] px-6 py-4 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white/[0.14] active:scale-[0.98]" href="#contacta">Solicitar más información</a>
+
+<div class="mt-10 grid gap-8 lg:grid-cols-2">
+<section class="min-w-0" aria-labelledby="tarifas-adultos">
+<h3 id="tarifas-adultos" class="mb-4 text-xl font-black">Mayores de 16 años</h3>
+<div class="table-shell" tabindex="0" role="region" aria-label="Tarifas para mayores de 16 años">
+<table class="data-table">
+<thead>
+<tr><th scope="col">Actividad</th><th scope="col">Zona norte y UGR</th><th scope="col">General</th></tr>
+</thead>
+<tbody>
+<tr><td>Acuáticas</td><td class="price">40 EUR</td><td class="price">48 EUR</td></tr>
+<tr><td>Deportivas</td><td class="price">36 EUR</td><td class="price">44 EUR</td></tr>
+<tr><td>Sala de musculación</td><td class="price">38 EUR</td><td class="price">46 EUR</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="min-w-0" aria-labelledby="tarifas-infantiles">
+<h3 id="tarifas-infantiles" class="mb-4 text-xl font-black">Menores de 16 años</h3>
+<div class="table-shell" tabindex="0" role="region" aria-label="Tarifas para menores de 16 años">
+<table class="data-table">
+<thead>
+<tr><th scope="col">Actividad</th><th scope="col">Zona norte y UGR</th><th scope="col">General</th></tr>
+</thead>
+<tbody>
+<tr><td>Acuáticas</td><td class="price">36 EUR</td><td class="price">44 EUR</td></tr>
+<tr><td>Deportivas</td><td class="price">32 EUR</td><td class="price">42 EUR</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+
+<div class="mt-8 grid gap-4 border-t border-line pt-8 md:grid-cols-2">
+<div>
+<p class="text-xs font-black uppercase tracking-[0.14em] text-primary">Bonificación UGR</p>
+<p class="mt-2 font-bold">Trabajadores, cónyuges e hijos.</p>
+</div>
+<div>
+<p class="text-xs font-black uppercase tracking-[0.14em] text-primary">Bonificación Zona Norte</p>
+<p class="mt-2 font-bold">Certificado de empadronamiento en los códigos postales 18011 o 18013.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section id="contacta" class="bg-white py-16">
-<div class="mx-auto grid max-w-7xl gap-8 px-5 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+<section class="bg-white py-16 md:py-20">
+<div class="mx-auto max-w-7xl px-5 md:px-8">
+<div class="cta-band grid gap-8 rounded-xl p-8 text-white shadow-soft md:p-10 lg:grid-cols-[1fr_0.7fr] lg:items-center">
 <div>
-<p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Contacta</p>
+<p class="text-xs font-black uppercase tracking-[0.18em] text-white/75">Inscripciones próximamente</p>
+<h2 class="mt-3 text-3xl font-black leading-tight md:text-5xl">Mientras activamos los formularios, resolvemos tus dudas por correo.</h2>
+<p class="mt-5 max-w-2xl leading-relaxed text-white/90">Los nuevos enlaces de inscripción se publicarán más adelante. Puedes escribirnos para consultar grupos, horarios o documentación.</p>
+</div>
+<a class="inline-flex items-center justify-center rounded-full bg-white px-6 py-4 text-center text-sm font-black uppercase tracking-[0.1em] text-primary transition hover:-translate-y-[1px] active:scale-[0.98]" href="mailto:psd@ebone.es">Escribir a psd@ebone.es</a>
+</div>
+</div>
+</section>
+
+<section id="contacto" class="bg-surface py-16 md:py-20">
+<div class="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+<div>
+<p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Contacto</p>
 <h2 class="mt-3 text-3xl font-black leading-tight md:text-5xl">Oficina del Proyecto Social Deportivo.</h2>
-<p class="mt-5 max-w-xl leading-relaxed text-muted">Si necesitas confirmar turnos, documentación, servicios opcionales o disponibilidad, puedes contactar por correo o acudir en horario de oficina.</p>
+<p class="mt-5 max-w-xl leading-relaxed text-muted">Atención para consultas sobre actividades, grupos, documentación y futuras inscripciones.</p>
 </div>
 <div class="grid gap-4 sm:grid-cols-2">
-<div class="rounded-lg border border-line bg-surface p-5">
-<span class="material-symbols-outlined text-3xl text-primary">schedule</span>
-<h3 class="mt-4 font-headline text-lg font-black">Horario de oficina</h3>
-<p class="mt-3 text-sm leading-relaxed text-muted">Lunes y miércoles: 11:30 - 13:30.</p>
-<p class="mt-1 text-sm leading-relaxed text-muted">Martes y jueves: 16:30 - 18:30.</p>
+<div class="border-t-2 border-primary bg-white p-6 shadow-panel">
+<h3 class="font-headline text-lg font-black">Horario de oficina</h3>
+<p class="mt-4 text-sm leading-relaxed text-muted"><strong class="text-ink">Lunes y miércoles</strong><br>10:30 - 12:00</p>
+<p class="mt-3 text-sm leading-relaxed text-muted"><strong class="text-ink">Martes y jueves</strong><br>16:30 - 17:00</p>
 </div>
-<div class="rounded-lg border border-line bg-surface p-5">
-<span class="material-symbols-outlined text-3xl text-primary">call</span>
-<h3 class="mt-4 font-headline text-lg font-black">Teléfono de contacto</h3>
-<a class="mt-3 inline-block text-sm font-bold text-primary transition hover:text-primary-strong" href="tel:+34958244351">958 244 351</a>
+<div class="border-t-2 border-primary bg-white p-6 shadow-panel">
+<h3 class="font-headline text-lg font-black">Teléfono y correo</h3>
+<a class="mt-4 block font-bold text-primary transition hover:text-primary-strong" href="tel:+34958244351">958 244 351</a>
+<a class="mt-3 block font-bold text-primary transition hover:text-primary-strong" href="mailto:psd@ebone.es">psd@ebone.es</a>
 </div>
-<div class="rounded-lg border border-line bg-surface p-5">
-<span class="material-symbols-outlined text-3xl text-primary">mail</span>
-<h3 class="mt-4 font-headline text-lg font-black">Correo del proyecto</h3>
-<a class="mt-3 inline-block text-sm font-bold text-primary transition hover:text-primary-strong" href="mailto:psd@ebone.es">psd@ebone.es</a>
-</div>
-<div class="rounded-lg border border-line bg-surface p-5">
-<span class="material-symbols-outlined text-3xl text-primary">location_on</span>
-<h3 class="mt-4 font-headline text-lg font-black">Ubicación</h3>
-<a class="mt-3 inline-block text-sm font-bold leading-relaxed text-primary transition hover:text-primary-strong" href="https://maps.app.goo.gl/b1xGzejenpUSK5hKA" target="_blank" rel="noopener noreferrer">Cam. de Alfacar, 21, Norte, 18011 Granada</a>
+<div class="border-t-2 border-primary bg-white p-6 shadow-panel sm:col-span-2">
+<h3 class="font-headline text-lg font-black">Instalaciones</h3>
+<a class="mt-4 inline-block font-bold leading-relaxed text-primary transition hover:text-primary-strong" href="https://maps.app.goo.gl/b1xGzejenpUSK5hKA" target="_blank" rel="noopener noreferrer">Camino de Alfacar, 21, Norte, 18011 Granada</a>
 </div>
 </div>
 </div>
@@ -217,22 +226,21 @@ Verano 2026
 </main>
 
 <footer class="border-t border-line bg-surface-soft py-10">
-<div class="mx-auto grid max-w-7xl gap-6 px-5 md:px-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+<div class="mx-auto grid max-w-7xl gap-6 px-5 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
 <div class="flex items-start gap-4">
-<img src="./assets/Logo_principal.png" alt="Logo Proyecto Social Deportivo" class="h-16 w-auto object-contain">
+<img src="./assets/Logo_principal.png" alt="Logo del Proyecto Social Deportivo" class="h-16 w-auto object-contain">
 <div>
 <p class="text-xs font-black uppercase tracking-[0.18em] text-primary">Facultad de Ciencias del Deporte</p>
-<p class="mt-2 font-headline text-2xl font-black">Proyecto Social Deportivo 2026</p>
-<p class="mt-3 max-w-xl text-sm leading-relaxed text-muted">Iniciación y acceso al deporte en la zona norte de Granada.</p>
+<p class="mt-2 font-headline text-2xl font-black">Proyecto Social Deportivo 2026-2027</p>
+<p class="mt-3 max-w-xl text-sm leading-relaxed text-muted">Actividades acuáticas y deportivas en la zona norte de Granada.</p>
 </div>
 </div>
-<div class="rounded-lg border border-line bg-white p-5">
-<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Protección de datos</p>
-<p class="mt-3 text-sm leading-relaxed text-muted">El tratamiento de datos personales se realiza conforme al RGPD y a la normativa vigente. Consulta la información legal y de privacidad de Ebone:</p>
+<div class="border-t border-line pt-5 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+<p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Información legal</p>
 <div class="mt-4 flex flex-wrap gap-4">
 <a class="text-sm font-bold text-primary transition hover:text-primary-strong" href="https://ebone.es/aviso-legal/" target="_blank" rel="noopener noreferrer">Aviso legal</a>
 <a class="text-sm font-bold text-primary transition hover:text-primary-strong" href="https://ebone.es/ebone-formacion/politica-de-privacidad/" target="_blank" rel="noopener noreferrer">Política de privacidad</a>
-<a class="text-sm font-bold text-primary transition hover:text-primary-strong" href="mailto:psd@ebone.es">psd@ebone.es</a>
+<a class="text-sm font-bold text-primary transition hover:text-primary-strong" href="mailto:psd@ebone.es">Contacto</a>
 </div>
 </div>
 </div>

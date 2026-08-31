@@ -1,0 +1,242 @@
+:root {
+  --psd-green: #1f9348;
+  --psd-green-strong: #146f35;
+  --psd-green-dark: #123323;
+  --psd-green-soft: #e9f7ec;
+  --psd-surface: #f7fbf5;
+  --psd-surface-soft: #eef6ef;
+  --psd-ink: #183124;
+  --psd-muted: #58685f;
+  --psd-line: #d7e5d8;
+  --psd-focus: #f4b942;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    96deg,
+    rgba(18, 51, 35, 0.96) 0%,
+    rgba(20, 111, 53, 0.84) 48%,
+    rgba(18, 51, 35, 0.42) 100%
+  );
+}
+
+.hero-overlay--children {
+  background: linear-gradient(
+    96deg,
+    rgba(18, 51, 35, 0.96) 0%,
+    rgba(31, 147, 72, 0.76) 54%,
+    rgba(18, 51, 35, 0.3) 100%
+  );
+}
+
+.hero-overlay--adults {
+  background: linear-gradient(
+    96deg,
+    rgba(14, 74, 99, 0.96) 0%,
+    rgba(24, 111, 126, 0.8) 52%,
+    rgba(18, 51, 35, 0.34) 100%
+  );
+}
+
+.cta-band {
+  background: linear-gradient(135deg, var(--psd-green-strong) 0%, var(--psd-green) 64%, #27809a 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-headline {
+  font-family: "Lexend", sans-serif;
+  letter-spacing: 0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--psd-focus);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 50;
+  transform: translateY(-180%);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--psd-green-strong);
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+  box-shadow: 0 14px 36px -20px rgba(18, 51, 35, 0.42);
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 {
+  animation-delay: 80ms;
+}
+
+.delay-2 {
+  animation-delay: 160ms;
+}
+
+.delay-3 {
+  animation-delay: 240ms;
+}
+
+.audience-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.audience-card::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  content: "";
+  pointer-events: none;
+}
+
+.audience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 54px -34px rgba(18, 51, 35, 0.52);
+}
+
+.audience-card:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.table-shell {
+  overflow-x: auto;
+  border: 1px solid var(--psd-line);
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 18px 42px -34px rgba(18, 51, 35, 0.36);
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem 1.125rem;
+  border-bottom: 1px solid var(--psd-line);
+  vertical-align: top;
+}
+
+.data-table th {
+  background: var(--psd-surface-soft);
+  color: var(--psd-green-dark);
+  font-family: "Lexend", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table tbody tr:hover {
+  background: var(--psd-surface);
+}
+
+.data-table .price {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.schedule-card {
+  border-top: 3px solid var(--psd-green);
+  background: #ffffff;
+  box-shadow: 0 18px 42px -34px rgba(18, 51, 35, 0.38);
+}
+
+.schedule-card--water {
+  border-top-color: #27809a;
+}
+
+.schedule-card--sport {
+  border-top-color: var(--psd-green);
+}
+
+.schedule-card time,
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .data-table {
+    min-width: 36rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
