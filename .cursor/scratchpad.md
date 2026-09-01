@@ -50,7 +50,7 @@ El objetivo de esta fase Planner es valorar la viabilidad y preparar una impleme
 
 - La fecha pública de inicio será el **6 de octubre de 2026**. El primer periodo se mostrará desde ese día para evitar la contradicción del PDF.
 - `LX` queda confirmado como **lunes y miércoles** y `MJ` como **martes y jueves**. Las siglas no se mostrarán solas en la web.
-- Los enlaces de inscripción se generarán más adelante. Mientras no existan, no se reutilizarán formularios de verano ni se crearán enlaces vacíos: las páginas mostrarán `Inscripciones próximamente` y ofrecerán `psd@ebone.es` como contacto alternativo.
+- Los enlaces de inscripción se generarán más adelante. Las inscripciones se abrirán el **14 de septiembre**; la fecha se mostrará de forma destacada en la portada y se repetirá en pequeño junto al horario de oficina. No se reutilizarán formularios de verano ni se crearán enlaces vacíos; mientras no existan formularios nuevos, se ofrecerá `psd@ebone.es` como contacto alternativo.
 - El enlace de política de devolución se generará más adelante. No se añadirá un enlace vacío; queda como contenido pendiente para el paso 7 y como requisito antes del despliegue definitivo.
 - El horario nuevo sustituye al anterior: lunes y miércoles de 10:30 a 12:00; martes y jueves de 16:30 a 17:00.
 - Se reutilizarán las fotografías existentes.
@@ -211,10 +211,14 @@ Publicar mediante el procedimiento Plesk confirmado, manteniendo una copia recup
 - 2026-08-31 - Executor: detectado desbordamiento móvil en la cuadrícula de tarifas; solucionado con `min-w-0` en cada sección para contener el desplazamiento dentro de `.table-shell`.
 - 2026-08-31 - Executor: prueba final en verde con 143 comprobaciones correctas y 0 fallos.
 - 2026-08-31 - Executor: QA visual realizado a 1440 × 900 y 390 × 844. Las tres páginas no presentan desbordamiento, imágenes rotas, enlaces vacíos ni errores de consola. Todos los HTML, CSS e imágenes locales solicitados devolvieron 200/304, sin 404.
+- 2026-09-01 - Usuario: confirmada la apertura de inscripciones el 14 de septiembre y solicitado un aviso grande en la portada más un recordatorio pequeño junto al horario de oficina.
+- 2026-09-01 - Executor: prueba de aceptación actualizada antes de implementar; línea base TDD esperada de 140 comprobaciones correctas y 4 fallos por el aviso antiguo.
+- 2026-09-01 - Executor: fecha de apertura añadida en el hero de la portada, en el bloque de inscripción de las tres páginas y junto al horario de oficina. Eliminado el texto `Inscripciones próximamente` de las páginas activas.
+- 2026-09-01 - Executor: prueba final en verde con 144 comprobaciones correctas y 0 fallos. QA visual repetido a 1440 × 900 y 390 × 844: sin desbordamiento, imágenes rotas ni errores de consola.
 
 # Executor's Feedback or Assistance Requests
 
-La implementación local está terminada y verificada. Comando de referencia: `node tests/site-smoke.mjs` (resultado final: 143 comprobaciones correctas, 0 fallos).
+La implementación local está terminada y verificada. Comando de referencia: `node tests/site-smoke.mjs` (resultado final: 144 comprobaciones correctas, 0 fallos).
 
 Los enlaces de inscripción y la política de devolución siguen dependiendo de contenido futuro. Se han definido alternativas sin enlaces vacíos para poder avanzar, pero la política de devolución debe recibirse antes del despliegue definitivo.
 

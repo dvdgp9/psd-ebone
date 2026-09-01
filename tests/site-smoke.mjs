@@ -133,7 +133,7 @@ if (indexHtml) {
     "16:30 - 17:00",
     "958 244 351",
     "psd@ebone.es",
-    "Inscripciones próximamente",
+    "Inscripciones desde el 14 de septiembre",
   ]);
 
   report(indexHtml.includes('href="actividades-infantiles.html"'), "La portada enlaza a actividades-infantiles.html");
@@ -161,7 +161,7 @@ if (childrenHtml) {
     "16:00",
     "17:00",
     "18:00",
-    "Inscripciones próximamente",
+    "Inscripciones desde el 14 de septiembre",
     "psd@ebone.es",
   ]);
 }
@@ -187,12 +187,13 @@ if (adultsHtml) {
     "12:00 - 13:00",
     "17:00 - 19:00",
     "19:00",
-    "Inscripciones próximamente",
+    "Inscripciones desde el 14 de septiembre",
     "psd@ebone.es",
   ]);
 }
 
 const combinedActiveHtml = activePages.map(([, html]) => html).join("\n");
+report(!/Inscripciones\s+próximamente/i.test(visibleText(combinedActiveHtml)), "Las páginas activas no muestran el aviso antiguo de inscripciones próximas");
 for (const oldFormSlug of [
   "campamento-de-verano-2026",
   "intensivo-de-natacion-2026",
