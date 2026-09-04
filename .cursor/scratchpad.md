@@ -48,7 +48,7 @@ El objetivo de esta fase Planner es valorar la viabilidad y preparar una impleme
 
 ## Decisiones del usuario para la ejecución (2026-08-31)
 
-- La fecha pública de inicio será el **6 de octubre de 2026**. El primer periodo se mostrará desde ese día para evitar la contradicción del PDF.
+- ~~La fecha pública de inicio será el **6 de octubre de 2026**.~~ Decisión sustituida el 2026-09-04: la fecha definitiva de inicio será el **5 de octubre de 2026** y el primer periodo comenzará ese mismo día.
 - `LX` queda confirmado como **lunes y miércoles** y `MJ` como **martes y jueves**. Las siglas no se mostrarán solas en la web.
 - Los enlaces de inscripción se generarán más adelante. Las inscripciones se abrirán el **14 de septiembre**; la fecha se mostrará de forma destacada en la portada y se repetirá en pequeño junto al horario de oficina. No se reutilizarán formularios de verano ni se crearán enlaces vacíos; mientras no existan formularios nuevos, se ofrecerá `psd@ebone.es` como contacto alternativo.
 - El enlace de política de devolución se generará más adelante. No se añadirá un enlace vacío; queda como contenido pendiente para el paso 7 y como requisito antes del despliegue definitivo.
@@ -65,9 +65,9 @@ El objetivo de esta fase Planner es valorar la viabilidad y preparar una impleme
 - Temporada: `2026-2027`.
 - Programa: `Actividades acuáticas y deportivas`.
 - Accesos principales: `Niños y niñas · de 3 a 15 años` y `Adultos · mayores de 16 años`.
-- Vigencia general: del 6 de octubre de 2026 al 27 de mayo de 2027.
+- Vigencia general: del 5 de octubre de 2026 al 27 de mayo de 2027.
 - Periodos:
-  - 1.º: 6 de octubre - 26 de noviembre.
+  - 1.º: 5 de octubre - 26 de noviembre.
   - 2.º: 30 de noviembre - 28 de enero.
   - 3.º: 1 de febrero - 1 de abril.
   - 4.º: 5 de abril - 27 de mayo.
@@ -84,7 +84,7 @@ El objetivo de esta fase Planner es valorar la viabilidad y preparar una impleme
 
 ### Niños y niñas (`actividades-infantiles.html`)
 
-- Público: de 3 a 15 años; del 6 de octubre de 2026 al 27 de mayo de 2027.
+- Público: de 3 a 15 años; del 5 de octubre de 2026 al 27 de mayo de 2027.
 - Natación de 3 a 5 años: lunes y miércoles a las 16:00, 17:00 y 18:00; martes y jueves a las 16:00, 17:00 y 18:00.
 - Natación de 6 a 15 años: lunes y miércoles a las 16:00, 17:00 y 18:00; martes y jueves a las 16:00, 17:00 y 18:00.
 - Nota de natación: la distribución por niveles se realizará el primer día de piscina y será competencia de los monitores y el coordinador.
@@ -98,7 +98,7 @@ El objetivo de esta fase Planner es valorar la viabilidad y preparar una impleme
 
 ### Adultos (`actividades-adultos.html`)
 
-- Público: mayores de 16 años; del 6 de octubre de 2026 al 27 de mayo de 2027.
+- Público: mayores de 16 años; del 5 de octubre de 2026 al 27 de mayo de 2027.
 - Natación iniciación: lunes y miércoles a las 16:00.
 - Natación nivel 1 y 2: lunes y miércoles a las 17:00; martes y jueves a las 18:00.
 - Natación libre: lunes y miércoles a las 18:00; martes y jueves a las 17:00.
@@ -221,6 +221,7 @@ Publicar mediante el procedimiento Plesk confirmado, manteniendo una copia recup
 - 2026-09-04 - Executor: QA visual a 1280 × 720 y 390 × 844. En escritorio las dos tablas muestran las tres columnas completas y sin scroll; en móvil el scroll queda contenido en cada tabla y la página no desborda. Prueba final: 147 comprobaciones correctas y 0 fallos.
 - 2026-09-04 - Usuario: solicitado sustituir la etiqueta pública `Adultos` por `Adultas/os` y cambiar el hero de esa página por una imagen claramente protagonizada por una persona adulta. Cambio aplicado sin ejecutar pruebas, por petición expresa.
 - 2026-09-04 - Usuario: solicitado retirar el fondo blanco del aviso de apertura de inscripciones en el hero de inicio. El aviso queda integrado sobre la fotografía, sin tarjeta, borde ni sombra y con todo el texto en blanco.
+- 2026-09-04 - Usuario: confirmada por su compañera la fecha definitiva de inicio de actividades, **5 de octubre de 2026**. Actualizada en la portada, el primer periodo y ambas páginas de actividades.
 
 # Executor's Feedback or Assistance Requests
 

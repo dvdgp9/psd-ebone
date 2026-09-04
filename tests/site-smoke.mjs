@@ -109,7 +109,7 @@ if (indexHtml) {
     "Actividades acuáticas y deportivas",
     "Niños y niñas",
     "Adultas/os",
-    "6 de octubre",
+    "5 de octubre",
     "26 de noviembre",
     "30 de noviembre",
     "28 de enero",
@@ -150,7 +150,7 @@ if (stylesCss) {
 if (childrenHtml) {
   expectText("actividades-infantiles.html", visibleText(childrenHtml), [
     "de 3 a 15 años",
-    "6 de octubre de 2026",
+    "5 de octubre de 2026",
     "27 de mayo de 2027",
     "Natación de 3 a 5 años",
     "Natación de 6 a 15 años",
@@ -175,7 +175,7 @@ if (childrenHtml) {
 if (adultsHtml) {
   expectText("actividades-adultos.html", visibleText(adultsHtml), [
     "Mayores de 16 años",
-    "6 de octubre de 2026",
+    "5 de octubre de 2026",
     "27 de mayo de 2027",
     "Natación iniciación",
     "Natación nivel 1 y 2",
