@@ -87,7 +87,7 @@ function checkLocalLinks(pageName, html) {
 const indexHtml = readProjectFile("index.html");
 const childrenHtml = readProjectFile("actividades-infantiles.html");
 const adultsHtml = readProjectFile("actividades-adultos.html");
-readProjectFile("styles.css");
+const stylesCss = readProjectFile("styles.css");
 
 const activePages = [
   ["index.html", indexHtml],
@@ -108,7 +108,7 @@ if (indexHtml) {
     "Temporada 2026-2027",
     "Actividades acuáticas y deportivas",
     "Niños y niñas",
-    "Adultos",
+    "Adultas/os",
     "6 de octubre",
     "26 de noviembre",
     "30 de noviembre",
@@ -139,6 +139,12 @@ if (indexHtml) {
   report(indexHtml.includes('href="actividades-infantiles.html"'), "La portada enlaza a actividades-infantiles.html");
   report(indexHtml.includes('href="actividades-adultos.html"'), "La portada enlaza a actividades-adultos.html");
   report(!/campamentos\.html|intensivos-natacion\.html|aquagym\.html|natacion-escolar\.html/i.test(navigation), "La navegación nueva no enlaza páginas de verano");
+  report(/class=["'][^"']*home-hero-layout[^"']*["']/.test(indexHtml), "El hero utiliza una retícula compartida para sus dos columnas");
+}
+
+if (stylesCss) {
+  report(/\.data-table\s*{[^}]*min-width:\s*100%/s.test(stylesCss), "Las tablas ocupan su contenedor completo en escritorio");
+  report(/@media\s*\(max-width:\s*767px\)[\s\S]*?\.data-table\s*{[^}]*min-width:\s*36rem/s.test(stylesCss), "Las tablas reservan el desplazamiento horizontal para móvil");
 }
 
 if (childrenHtml) {

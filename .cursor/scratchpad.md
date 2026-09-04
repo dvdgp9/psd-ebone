@@ -215,10 +215,15 @@ Publicar mediante el procedimiento Plesk confirmado, manteniendo una copia recup
 - 2026-09-01 - Executor: prueba de aceptación actualizada antes de implementar; línea base TDD esperada de 140 comprobaciones correctas y 4 fallos por el aviso antiguo.
 - 2026-09-01 - Executor: fecha de apertura añadida en el hero de la portada, en el bloque de inscripción de las tres páginas y junto al horario de oficina. Eliminado el texto `Inscripciones próximamente` de las páginas activas.
 - 2026-09-01 - Executor: prueba final en verde con 144 comprobaciones correctas y 0 fallos. QA visual repetido a 1440 × 900 y 390 × 844: sin desbordamiento, imágenes rotas ni errores de consola.
+- 2026-09-04 - Usuario: aportadas capturas donde el hero quedaba descompensado por la alineación inferior y las tablas mostraban desplazamiento horizontal y la última columna cortada en escritorio.
+- 2026-09-04 - Executor: hero reajustado sobre una retícula compartida, con columnas centradas verticalmente y proporciones más equilibradas; tamaño del titular moderado en escritorio.
+- 2026-09-04 - Executor: tablas corregidas para ocupar el 100 % de cada columna en escritorio, con anchos de columna deterministas. El desplazamiento horizontal se conserva exclusivamente en móvil.
+- 2026-09-04 - Executor: QA visual a 1280 × 720 y 390 × 844. En escritorio las dos tablas muestran las tres columnas completas y sin scroll; en móvil el scroll queda contenido en cada tabla y la página no desborda. Prueba final: 147 comprobaciones correctas y 0 fallos.
+- 2026-09-04 - Usuario: solicitado sustituir la etiqueta pública `Adultos` por `Adultas/os` y cambiar el hero de esa página por una imagen claramente protagonizada por una persona adulta. Cambio aplicado sin ejecutar pruebas, por petición expresa.
 
 # Executor's Feedback or Assistance Requests
 
-La implementación local está terminada y verificada. Comando de referencia: `node tests/site-smoke.mjs` (resultado final: 144 comprobaciones correctas, 0 fallos).
+La implementación local está terminada y verificada. Comando de referencia: `node tests/site-smoke.mjs` (resultado final: 147 comprobaciones correctas, 0 fallos).
 
 Los enlaces de inscripción y la política de devolución siguen dependiendo de contenido futuro. Se han definido alternativas sin enlaces vacíos para poder avanzar, pero la política de devolución debe recibirse antes del despliegue definitivo.
 
@@ -234,4 +239,5 @@ El usuario realizará la publicación en Plesk. Debe subir al menos `index.html`
 - Incluir información útil para depuración en las pruebas y en cualquier salida de validación.
 - El controlador del navegador disponible no admite `networkidle`; para las comprobaciones locales se debe esperar al estado `load` y después inspeccionar recursos, DOM y consola.
 - Si una página no declara favicon, el navegador solicita `/favicon.ico` y genera un 404; reutilizar `assets/Logo_principal.png` como favicon evita esa petición fallida.
+- No fijar un ancho mínimo de tabla mayor que la columna de escritorio que la contiene; usar `min-width: 100%` y reservar el ancho desplazable para el breakpoint móvil.
 - En una cuadrícula CSS, una tabla con ancho mínimo puede ensanchar toda la página aunque su contenedor tenga `overflow-x: auto`; aplicar `min-width: 0` al elemento de cuadrícula permite que el desplazamiento quede contenido en `.table-shell`.
