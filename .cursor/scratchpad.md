@@ -220,6 +220,7 @@ Publicar mediante el procedimiento Plesk confirmado, manteniendo una copia recup
 - 2026-09-04 - Executor: tablas corregidas para ocupar el 100 % de cada columna en escritorio, con anchos de columna deterministas. El desplazamiento horizontal se conserva exclusivamente en móvil.
 - 2026-09-04 - Executor: QA visual a 1280 × 720 y 390 × 844. En escritorio las dos tablas muestran las tres columnas completas y sin scroll; en móvil el scroll queda contenido en cada tabla y la página no desborda. Prueba final: 147 comprobaciones correctas y 0 fallos.
 - 2026-09-04 - Usuario: solicitado sustituir la etiqueta pública `Adultos` por `Adultas/os` y cambiar el hero de esa página por una imagen claramente protagonizada por una persona adulta. Cambio aplicado sin ejecutar pruebas, por petición expresa.
+- 2026-09-04 - Usuario: solicitado retirar el fondo blanco del aviso de apertura de inscripciones en el hero de inicio. El aviso queda integrado sobre la fotografía, sin tarjeta, borde ni sombra y con todo el texto en blanco.
 
 # Executor's Feedback or Assistance Requests
 
